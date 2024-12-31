@@ -5,7 +5,7 @@ metadata:
   name: test-pv
 spec:
   accessModes:
-    - ReadWritenOnce
+    - ReadWriteOnce
   capacity:
     storage: 5Gi
   csi:
@@ -15,7 +15,7 @@ spec:
   nodeAffinity:
     required:
       nodeSelectorTerms:
-        - matchExpreessions:
+        - matchExpressions:
             - key: topology.ebs.csi.aws.com/zone
               operator: In
               values:
