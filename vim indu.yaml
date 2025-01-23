@@ -1,0 +1,15 @@
+---
+- name: kubernetesplaybook
+  hosts: all
+  become: true
+  tasks:
+    - name: copy pod yaml file to kubernetes
+      copy:
+        src: /home/ubuntu/kpod.yaml
+        dest: /home/ubuntu/
+
+
+    - name: pod kubernetes
+      shell:
+        cmd: "kubectl apply -f kpod.yaml"
+                               
