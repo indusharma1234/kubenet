@@ -1,0 +1,9 @@
+kind: Pod
+metadata:
+  name: k2pod
+spec:
+  containers:
+  - name: k2pod
+    image: nginx:latest
+    ports:
+    - containerPort: 80
