@@ -3,6 +3,11 @@
   hosts: all
   become: true
   tasks:
+    - name: copy dockerfile to remote ansible machine
+      copy:
+       src: /var/lib/jenkins/workspace/computer
+       dest: /home/ubuntu/
+       
     - name: copy pod yaml file to kubernetes
       copy:
         src: /home/ubuntu/kpod.yaml
