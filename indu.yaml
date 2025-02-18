@@ -5,7 +5,7 @@
   tasks:
     - name: copy remote ansible machine
       copy:
-       src: /var/lib/jenkins/workspace/computer/indu.yaml
+       src: /var/lib/jenkins/workspace/computer/kpod.yaml
        dest: /home/ubuntu/
     
     - name: pod kubernetes
